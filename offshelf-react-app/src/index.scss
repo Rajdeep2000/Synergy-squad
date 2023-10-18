@@ -1,0 +1,13 @@
+@use '@carbon/react';
+@use '@carbon/themes/scss/themes';
+@use '@carbon/themes/scss/theme';
+
+// Uses the default white theme here
+
+.my-dark-theme {
+  @include theme.theme(themes.$g90);
+}
+
+.my-darker-theme {
+  @include theme.theme(themes.$g100);
+}
