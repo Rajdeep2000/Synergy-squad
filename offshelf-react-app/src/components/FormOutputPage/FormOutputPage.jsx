@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import {
     Button, Tile, TextInput, NumberInput, DatePickerInput, DatePicker, Modal, Toggle
 } from '@carbon/react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import sampleImage from '../../assets/sample.jpg';
 import { Add, CrossTab, List, TextBold, Close } from '@carbon/icons-react';
 const FormOuputPage = () => {
+    const {name, type, qty, expiry} = useParams();
+    console.log(name, type, qty, expiry);
     const [image, saveImage] = useState();
     // const [expiryDate] = useState(new Date());
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false)
     const [selectedProductType, setSelectedProductType] = useState(''); // to store selected product type
     const [inputValue, setInputValue] = useState('')
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(qty? Number(qty):0);
     // const [inputQty, setInputQty] = useState(quantity);
 
     const productType = ['Vegetable', 'Fruit', 'Dairy', 'Canned']

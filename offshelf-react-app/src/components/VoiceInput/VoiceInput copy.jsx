@@ -9,6 +9,7 @@ import { ArrowRight, Checkmark, Renew, ResultNew } from '@carbon/icons-react';
 import { AudioRecorder } from 'react-audio-voice-recorder';
 import apiConfig from '../../config/apiConfig.json';
 import axios from 'axios';
+import wordsToNumbers from 'words-to-numbers';
 
 const VoiceInput = ({name, setName,type}) => {
   const [error, setError] = useState();
@@ -42,11 +43,14 @@ const VoiceInput = ({name, setName,type}) => {
     setLoading(false);
     if(data?.data){
     if(type==='quantity'){
-      setTempName(data?.data);
+      setTempName(wordsToNumbers(data?.data));
     }
     else if(type==='expiry' && data.data){
-      
-      setTempName(data.data);
+      let temp = [];
+      data.data.split(" ").map(d=>{
+        temp.push(wordsToNumbers(d))
+      })
+      setTempName(temp.join('/'));
     }
     else{
     setTempName(data?.data);

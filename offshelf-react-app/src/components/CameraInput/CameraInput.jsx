@@ -15,7 +15,7 @@ const CameraInput = ({ }) => {
   const [image, saveImage] = useState();
   const navigate = useNavigate();
   return (
-    <div className='form-container'>
+    <div className='form-container-camera'>
       <div className='btn-div'>
         <Button style={{borderRadius: '50px'}}className='btn-cancel' kind='default' onClick={e => { navigate('/form/new') }} renderIcon={ArrowLeft} hasIconOnly ></Button> </div>
       {(!image ? <div className='img-container'><Webcam

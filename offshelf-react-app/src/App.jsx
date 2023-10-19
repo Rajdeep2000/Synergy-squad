@@ -21,6 +21,10 @@ import { Product } from '@carbon/icons-react';
 import ProductDetails from './components/ProductDetails';
 import VoiceInput from './components/VoiceInput';
 import { Login } from '@carbon/icons-react';
+import { useEffect } from 'react';
+import apiConfig from './config/apiConfig.json';
+import axios from 'axios';
+import VoiceInputContainer from './components/VoiceInputContainer';
 
 function App() {
   const { theme } = useTheme();
@@ -49,8 +53,12 @@ function App() {
       element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
     },
     {
+      path: "form/output/:name/:type/:qty/:expiry",
+      element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
+    },
+    {
       path: "form/voice",
-      element: <RequireAuth><PageHeader /><VoiceInput /></RequireAuth>,
+      element: <RequireAuth><PageHeader /><VoiceInputContainer /></RequireAuth>,
     },
     {
       path: "dashboard",
@@ -61,10 +69,25 @@ function App() {
       element: <RegisterPage />,
     },
     {
-      path: "product-details",
+      path: "product-details/:name",
       element: <RequireAuth><PageHeader /><ProductDetails /></RequireAuth>,
     }
   ]);
+
+/*   const login = async () => {
+    try {
+      await axios.post(apiConfig.login, {
+        username: 'example_user1',
+        email: 'user1@example.com',
+        password: 'secure_password1'
+      });
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  login(); */
+
   return (
     <GlobalTheme theme="g10">
       <Theme theme="g10">
