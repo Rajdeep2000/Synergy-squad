@@ -101,10 +101,9 @@ function App() {
   )
 }
 function RequireAuth({ children }) {
-  /* if (!window.sessionStorage.getItem("token")) {
+  if (!window.sessionStorage.getItem("token")) {
     return <Navigate to="/login" replace={true} />;
-  } */
-
+  }
   return children;
 }
 
