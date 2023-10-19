@@ -21,13 +21,14 @@ import { Product } from '@carbon/icons-react';
 import ProductDetails from './components/ProductDetails';
 import VoiceInput from './components/VoiceInput';
 import { Login } from '@carbon/icons-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import apiConfig from './config/apiConfig.json';
 import axios from 'axios';
 import VoiceInputContainer from './components/VoiceInputContainer';
 
 function App() {
   const { theme } = useTheme();
+  const [image, setImage] = useState();
 
   const router = createBrowserRouter([
     {
@@ -46,11 +47,11 @@ function App() {
     },
     {
       path: "form/camera",
-      element: <RequireAuth><PageHeader /><CameraInput /></RequireAuth>,
+      element: <RequireAuth><PageHeader /><CameraInput image={image} setImage={setImage} /></RequireAuth>,
     },
     {
       path: "form/output",
-      element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
+      element: <RequireAuth><PageHeader /><FormOutputPage image={image} setImage={setImage} /></RequireAuth>,
     },
     {
       path: "form/output/:name/:type/:qty",
@@ -78,19 +79,19 @@ function App() {
     }
   ]);
 
-/*   const login = async () => {
-    try {
-      await axios.post(apiConfig.login, {
-        username: 'example_user1',
-        email: 'user1@example.com',
-        password: 'secure_password1'
-      });
-    } catch (err) {
-      console.error(err)
+  /*   const login = async () => {
+      try {
+        await axios.post(apiConfig.login, {
+          username: 'example_user1',
+          email: 'user1@example.com',
+          password: 'secure_password1'
+        });
+      } catch (err) {
+        console.error(err)
+      }
     }
-  }
-
-  login(); */
+  
+    login(); */
 
   return (
     <GlobalTheme theme="g10">
