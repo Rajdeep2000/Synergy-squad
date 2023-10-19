@@ -53,6 +53,10 @@ function App() {
       element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
     },
     {
+      path: "form/output/:name/:type/:qty",
+      element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
+    },
+    {
       path: "form/output/:name/:type/:qty/:expiry",
       element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
     },
