@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import {
+<<<<<<< HEAD
     Button, ClickableTile, FluidForm, TextInput, Tile, Checkbox, PasswordInput, ToastNotification, ActionableNotification, Loading
+=======
+    Button, ClickableTile, FluidForm, TextInput, Tile, Checkbox, PasswordInput, ToastNotification, ActionableNotification
+>>>>>>> df588e5a724dcd1028d7d7bc593e0a3397e53f5a
 } from '@carbon/react';
 import Webcam from "react-webcam";
 import CameraInput from '../CameraInput';
@@ -32,9 +36,15 @@ const LoginPage = () => {
             setSuccess(true)
             setLoading(false);
         }
+<<<<<<< HEAD
         catch (err) {
             if (await err.response) {
                 console.log(await err.response)
+=======
+        catch (e) {
+            console.error(e)
+            if (await err.response) {
+>>>>>>> df588e5a724dcd1028d7d7bc593e0a3397e53f5a
                 const str = await Object.values(err.response?.data).join('\n');
                 setErrMsg(str);
             }
@@ -47,7 +57,10 @@ const LoginPage = () => {
 
     return (
         <div className='container'>
+<<<<<<< HEAD
             {loading&&<Loading/>}
+=======
+>>>>>>> df588e5a724dcd1028d7d7bc593e0a3397e53f5a
             <div className={success || error ? 'form-container sign-in-form overlay' : 'form-container sign-in-form'}>
                 {/* <CameraInput image={image} saveImage={saveImage}/> */}
                 {/* <div className='tiles-container'> */}
@@ -80,7 +93,11 @@ const LoginPage = () => {
                 </FluidForm>
                 {/* </div> */}
             </div>
+<<<<<<< HEAD
             {success && <ActionableNotification actionButtonLabel="Continue" onCloseButtonClick={() => { setSuccess(); navigate('/dashboard') }} role="status" title="Success" subtitle="Successfully logged in" kind="success" lowContrast={true} onActionButtonClick={() => { navigate('/dashboard') }} />}
+=======
+            {success && <ActionableNotification actionButtonLabel="Continue" onCloseButtonClick={() => { setSuccess(); navigate('/dashboard') }} role="status" title="Success" subtitle="Successfuly login" kind="success" lowContrast={true} onActionButtonClick={() => { navigate('/dashboard') }} />}
+>>>>>>> df588e5a724dcd1028d7d7bc593e0a3397e53f5a
             {error && <ToastNotification onCloseButtonClick={() => setErrMsg()} role="status" title="Error" subtitle={error} kind="error" lowContrast={true} />}
         </div>)
 }
