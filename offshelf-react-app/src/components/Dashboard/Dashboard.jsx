@@ -58,7 +58,7 @@ const Dashboard = () => {
     getList();
   }, []);
 
-  /* useEffect(() => {
+   useEffect(() => {
     if (filter) {
       let tempList = [...originalList].filter(l => l.type === filter);
       setList(tempList);
@@ -76,7 +76,7 @@ const Dashboard = () => {
     else {
       setList(originalList)
     }
-  }, [search]) */
+  }, [search]) 
 
   return (
     <>
@@ -88,7 +88,7 @@ const Dashboard = () => {
         </div>
         <div className='filter-container'>
           {!loading ? <div className='filter-inner-container'>
-            {categories?.map((c) => (<Tag className="some-class" onClick={() => { if (c !== filter) setFilter(c); else setFilter(); }} type={filter === c ? "high-contrast" : "outline"}>
+            {categories?.map((c) => (<Tag className="some-class" onClick={() => { if (c !== filter) setFilter(c); else setFilter(); }} type={filter===c ? "high-contrast":"outline"}>
               {c}
             </Tag>))}
           </div> : <div className='filter-inner-container'>
