@@ -12,9 +12,9 @@ const VoiceInputContainer = () => {
   const [quantity, setQuantity] = useState();
   const [expiry, setExpiry] = useState();  
 
-  useEffect(() => { if(name && type && quantity && expiry){
-      navigate(`/form/output/${name}/${type}/${quantity}/${expiry}`)
-  }}, [name, type, quantity, expiry])
+  useEffect(() => { if(name && type && quantity ){
+      navigate(`/form/output/${name}/${type}/${quantity}`)
+  }}, [name, type, quantity])
 
   return (
     <div className='voice-input-container'>
@@ -27,9 +27,9 @@ const VoiceInputContainer = () => {
        {name && type && !quantity && !expiry ?  <div className='label'>
         <div>Quantity of the product</div>
        <VoiceInput type="quantity" name={quantity} setName={setQuantity}/></div> :<></>}
-       {name && type && quantity && !expiry ?  <div className='label'>
+       {/* {name && type && quantity && !expiry ?  <div className='label'>
         <div>Expiry date of the product in the format MM/DD/YYYY</div>
-       <VoiceInput type="expiry"  name={expiry} setName={setExpiry}/></div> :<></>}
+       <VoiceInput type="expiry"  name={expiry} setName={setExpiry}/></div> :<></>} */}
     </div>
   );
 }

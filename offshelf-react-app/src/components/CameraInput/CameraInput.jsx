@@ -5,18 +5,20 @@ import {
 import Webcam from "react-webcam";
 import { ArrowLeft, Camera, Checkmark, Scan, ScanAlt } from '@carbon/icons-react';
 import { Link, useNavigate } from 'react-router-dom';
-const videoConstraints = {
-  width: 1280,
-  height: 720,
-  // facingMode: { exact: "environment" }
-  facingMode: "user"
-};
+
 const CameraInput = ({ image, setImage }) => {
   const [savedImage, setSavedImage] = useState();
   const navigate = useNavigate();
   const [productName, setProductName] = useState();
   const [password, setDays] = useState();
   const [productType, setProductType] = useState();
+  const isMobile = window.matchMedia("(max-width: 767px)").matches ? true: false;
+  const videoConstraints = {
+    width: 1280,
+    height: 720,
+    // facingMode: { exact: "environment" }
+    facingMode: isMobile ? "environment":"user"
+  };
   return (
     <div className='form-container-camera'>
       <div className='btn-div'>

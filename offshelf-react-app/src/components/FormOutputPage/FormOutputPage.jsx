@@ -3,7 +3,7 @@ import {
     Button, Tile, TextInput, NumberInput, DatePickerInput, DatePicker, Modal, Toggle, ToastNotification, ActionableNotification
 } from '@carbon/react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import sampleImage from '../../assets/sample.jpg';
+import sampleImage from '../../assets/no-image.svg';
 import { Add, CrossTab, List, TextBold, Close } from '@carbon/icons-react';
 import apiConfig from '../../config/apiConfig.json';
 import axios from 'axios';
@@ -16,10 +16,10 @@ const FormOuputPage = ({ image, setImage }) => {
     const [showModal, setShowModal] = useState(false)
     // const [selectedProductType, setSelectedProductType] = useState(''); // to store selected product type
     const [inputValue, setInputValue] = useState('')
-    const [productName, setProductName] = useState();
-    const [productType, setProductType] = useState();
-    const [quantity, setQuantity] = useState(0);
-    const [selectedDate, setSelectedDate] = useState();
+    const [productName, setProductName] = useState(name ? name: 0);
+    const [productType, setProductType] = useState(type?type:0);
+    const [quantity, setQuantity] = useState(qty? qty: 0);
+    const [selectedDate, setSelectedDate] = useState(expiry ? expiry:0);
     const [days] = useState(7);
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -102,7 +102,7 @@ const FormOuputPage = ({ image, setImage }) => {
             <div className={success || error ? 'form-container' : 'form-container sign-in-form'}>
                 <div className='img-container'>
                     <div className='product-img'>
-                        <img src={image} ></img>
+                        <img src={image ? image : sampleImage} ></img>
                     </div>
                     <div className='button-container'>
                         <Button className='btn-cancel' kind='default' onClick={e => { navigate('/form/camera') }} renderIcon={Close} hasIconOnly ></Button>
