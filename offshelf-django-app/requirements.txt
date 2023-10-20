@@ -1,0 +1,8 @@
+Django
+djangorestframework
+Pillow
+pyaudio
+wave
+ibm_watson
+ibm_cloud_sdk_core
+mysql-connector-python
