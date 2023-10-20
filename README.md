@@ -29,11 +29,11 @@
 
 ### The issue we are hoping to solve
 
-It is estimated that around 17 percent of total global food production is wasted in households. Our project aims to reduce this food wastage at the household by promoting responsible consumption and community collaboration.
+It is estimated that around 17 percent of total global food production is wasted in households. In a world where an estimated one in three people do not have access to adequate food this is a huge waste and it also impact the environment as this is also a major source of greenshouse gas emissions. Our project aims to reduce this food wastage at the household by promoting responsible consumption and community collaboration.
 
 ### How our technology solution can help
 
-Our solution enables users to track food inventory, recieve expiry notification and share surplus item within community.
+Our solution enables users to track food inventory, recieve expiry notification and share surplus item within community thereby reducing the chances of good food going bad.
 
 ### Our idea
 
@@ -58,21 +58,13 @@ Reducing food waste not only saves money but also plays a vital role in conservi
 
 ### Solution architecture
 
-Diagram and step-by-step description of the flow of our solution:
-
-
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
+[Offshelf architecture](./images/architecture.png)
 
 ## Presentation materials
 
-
-
 ### Solution demo video
 
-[![Watch the video](https://raw.githubusercontent.com/Liquid-Prep/Liquid-Prep/main/images/readme/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
+[![Watch the video](./images/Offshelf.png)](https://www.youtube.com/watch?v=KqYoOgIf7uA)
 
 ### Project development roadmap
 
@@ -92,17 +84,11 @@ In the future we plan to...
 - Image recognition: Read product labels to extract item details like category, expiry dates and directly save to build up the inventory faster. Also support extraction of data from invoices wherever possible.
  
 
-See below for our proposed schedule on next steps after Call for Code 2023 submission.
-
-![Roadmap](./images/roadmap.jpg)
-
 ## Additional details
 
-_INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
 
 ### How to run the project
 
-INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
 docker  network create my-net
 
 docker run -d--name mysql-container --network my-net -e MYSQL_ROOT_PASSWORD=mysql12345 -e MYSQL_DATABASE=offshelf mysql:8.0.1
@@ -123,29 +109,11 @@ take the ip address and put it in /etc/hosts file
 
 --------------------------------------------------------------------------------------------------------
 
-docker run -it --name django-container --network my-net -p 8000:8000 rajdeep662/offshelf4.1
+docker run -it --name django-container --network my-net -p 8000:8000 rajdeep662/offshelf4.3
 
 Access the static website at <a href="https://son-ya123.github.io/offShelf/dashboard"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the frontend code locally
 
-### Live demo
 
-You can find a running system to test at...
-
-See our [description document](./docs/DESCRIPTION.md) for log in credentials.
-
----
-
-_INSTRUCTIONS: You can remove the below section from your specific project README._
-
-## About this template
-
-### Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-### Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ### Authors
 
