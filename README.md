@@ -149,9 +149,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ### Authors
 
-<a href="https://github.com/son-ya123/Synergy-squad/graphs/contributors">
-  [<img src="https://github.com/{{ contributor }}.png" width="60px;"/><br /><sub><ahref="https://github.com/{{ contributor }}">{{ contributor }}</a></sub>](https://github.com/{{ contributor }}/{{ repository }}
-</a>
+[Contributors](https://github.com/son-ya123/Synergy-squad/graphs/contributors)
 
 ### License
 
