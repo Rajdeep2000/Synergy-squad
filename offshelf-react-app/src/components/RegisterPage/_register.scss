@@ -113,4 +113,7 @@
 
 .cds--toast-notification--low-contrast .cds--toast-notification__subtitle {
     white-space: pre-wrap;
+    max-height: 20rem;
+    overflow: auto;
+    height: auto;
 }

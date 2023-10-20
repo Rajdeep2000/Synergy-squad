@@ -73,7 +73,7 @@
 .btn-saved {
    position: absolute;
    top: 20px;
-   right: -20.5rem;
+   right: -24.5rem;
    justify-content: center;
    align-items: center;
 }
@@ -132,4 +132,12 @@
 .right-btn .buttonPlus {
    border-top-right-radius: 10px;
    border-bottom-right-radius: 10px;
+}
+.form-output{
+   .product-img img {
+      max-width: 100%;
+      max-height: 25rem;
+      display: block;
+      margin: 0 auto;
+  }
 }

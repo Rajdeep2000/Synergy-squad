@@ -4,5 +4,6 @@
     "logout": "http://127.0.0.1:8000/logout/",
     "count": "http://127.0.0.1:8000/api/item/list/count/",
     "list": "http://127.0.0.1:8000/api/item/",
-    "search": "http://127.0.0.1:8000/api/item/info/"
+    "search": "http://127.0.0.1:8000/api/item/list/info/",
+    "audio":"http://127.0.0.1:8000/api/audio/"
 }

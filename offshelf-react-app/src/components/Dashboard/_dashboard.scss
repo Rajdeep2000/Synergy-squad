@@ -1,6 +1,6 @@
 .dashboard-container {
   margin-top: 3rem;
-  /* height: calc(100vh - 7rem); */
+  min-height: calc(100vh - 7rem);
 }
 
 .filter-container {
@@ -87,9 +87,9 @@
   background-color: #0050e6 !important;
 }
 
-/* .cds--tag--outline {
-  box-shadow: 0 0 0 1px #0050e6 !important;
-} */
+.some-class {
+  box-shadow: none !important;
+}
 
 .products-name {
   font-size: 16px;
@@ -97,11 +97,6 @@
 
 .products-category {
   font-size: 12px;
-}
-
-.cds--tag--outline {
-  color: gray !important;
-  box-shadow: 0 0 0 1px gray !important;
 }
 
 .empty-container {
@@ -142,4 +137,12 @@
   .cds--btn--icon-only {
     border-radius: 2rem;
   }
+}
+
+.products-expiry-date {
+  white-space: nowrap;
+}
+.product-img-container{
+  width: 100px;
+  height: 60px;
 }

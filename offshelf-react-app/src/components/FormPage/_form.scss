@@ -21,6 +21,16 @@
       max-width: unset;
       width: 100%;
    }
+
+   .cds--tile--clickable {
+      background: #0050e6;
+      color: white;
+      border-radius: 1rem;
+   }
+
+   svg {
+      fill: #fff !important;
+   }
 }
 
 .form-title {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-    Button, FluidForm, TextInput, Tile, Checkbox, PasswordInput, ToastNotification, ActionableNotification
+    Button, FluidForm, TextInput, Tile, Checkbox, PasswordInput, ToastNotification, ActionableNotification, Loading
 } from '@carbon/react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from '@carbon/icons-react';
@@ -52,6 +52,7 @@ const RegisterPage = () => {
                     {/* <Button className='arrowLeft' onClick={e => navigate("/login")} size='sm' kind='ghost' renderIcon={ArrowLeft}></Button> */}
                     <h5 className='form-title'>Create Account</h5>
                 </div>
+                {loading && <Loading/>}
                 <FluidForm>
                     <TextInput type="text" labelText="Username" id="username" placeholder='Your username' onChange={e => { setUserName(e.target.value) }} />
                     <br />
@@ -82,7 +83,7 @@ const RegisterPage = () => {
                 </FluidForm>
 
             </div>
-            {success && <ActionableNotification actionButtonLabel="Continue" onCloseButtonClick={() => { setSuccess(); navigate('/dashboard') }} role="status" title="Success" subtitle="Your account has been created" kind="success" lowContrast={true} onActionButtonClick={() => { navigate('/dashboard') }} />}
+            {success && <ActionableNotification actionButtonLabel="Continue" onCloseButtonClick={() => { setSuccess(); navigate('/login') }} role="status" title="Success" subtitle="Your account has been created" kind="success" lowContrast={true} onActionButtonClick={() => { navigate('/dashboard') }} />}
             {error && <ToastNotification onCloseButtonClick={() => setErrMsg()} role="status" title="Error" subtitle={error} kind="error" lowContrast={true} />}
 
         </div>)

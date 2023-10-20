@@ -1,10 +1,7 @@
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/solutions/projects/get-started/)
 
-_INSTRUCTIONS: This GitHub repository serves as a template you can use to create a new project for the [2023 Call for Code Global Challenge](https://developer.ibm.com/callforcode/global-challenge/). Use the **Use this template** button to create a new version of this repository and start entering content for your own Call for Code submission project. Make sure you have [registered for the 2023 Call for Code Global Challenge](https://developer.ibm.com/callforcode/global-challenge/register/) to access resources and full project submission instructions. Remove any "INSTRUCTIONS" sections when you are ready to submit your project._
 
-_New to Git and GitHub? This free online course will get you up to speed quickly: [Getting Started with Git and GitHub](https://www.coursera.org/learn/getting-started-with-git-and-github)_.
-
-# Replace this heading with your team/submission name
+# Offshelf
 
 - [Project summary](#project-summary)
   - [The issue we are hoping to solve](#the-issue-we-are-hoping-to-solve)
@@ -27,46 +24,42 @@ _New to Git and GitHub? This free online course will get you up to speed quickly
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
-_INSTRUCTIONS: Complete all required deliverable sections below._
 
 ## Project summary
 
 ### The issue we are hoping to solve
 
-REPLACE THIS SENTENCE with a short description, 2-3 sentences in length, of the specific sustainability problem your solution is meant to address.
+It is estimated that around 17 percent of total global food production is wasted in households. Our project aims to reduce this food wastage at the household by promoting responsible consumption and community collaboration.
 
 ### How our technology solution can help
 
-REPLACE THIS SENTENCE with a short description of your team's solution, in about 10 words.
+Our solution enables users to track food inventory, recieve expiry notification and share surplus item within community.
 
 ### Our idea
 
-INSTRUCTIONS: Replace this paragraph with a longer description of your solution. In about 500 words, describe your solution in more detail. Include the real-world problem you identified, describe the technological solution you have created, and explain how it’s an improvement over existing solutions. You can supply additional documentation in this source code repository that you link to as well.
+The primary objective of Offshelf is to reduce household food wastage by implementing a comprehensive system that allows efficient tracking of fresh and packaged food items, monitor their expiry and notify users to utilize them before they go bad. Additionally we aim to create a community marketplace for sharing surplus food within the community thereby reducing wastage at a broader scale.
 
-More detail is available in our [description document](./docs/DESCRIPTION.md).
+The user can easily input and manage their stocked food items. Once an item is added the expiry dates for the same is tracked and timely automated notification is pushed to the users reducing likelihood of food wastage due to neglect.
+
+Even with the notifications in place there is still a possibility of wastage as many a times people tend to over stock items, specially fresh fruits & vegetables, which could not be consumed in time. To handle this scenario we propose to go a step further and provide a platform to facilitate sharing of surplus food items within the community. The users can list items they won't use and connect with neighbours who can benifit from them.
+
+Reducing food waste not only saves money but also plays a vital role in conserving resources and reducing green housegas emissions. This platform aligns with global effort to combat climate change and promotes sustainable leaving.
 
 ## Technology implementation
 
 ### IBM AI service(s) used
 
-_INSTRUCTIONS: Included here is a list of commonly used IBM AI services. Remove any services you did not use, or add others from the linked catalog not already listed here. Leave only those included in your solution code. Provide details on where and how you used each IBM AI service to help judges review your implementation. Remove these instructions._
+- [Watson Speech to Text](https://cloud.ibm.com/catalog/services/speech-to-text) - Watson Speech to Text service has been used to accept user voice input and auto populate/submit forms.
 
-- [IBM Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Discovery](https://cloud.ibm.com/catalog/services/watson-discovery) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Speech to Text](https://cloud.ibm.com/catalog/services/speech-to-text) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Text to Speech](https://cloud.ibm.com/catalog/services/text-to-speech) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- List any additional [IBM AI services](https://cloud.ibm.com/catalog?category=ai#services) used or remove this line
 
 ### Other IBM technology used
 
-INSTRUCTIONS: List any other IBM technology used in your solution and describe how each component was used. If you can provide links to/details on exactly where these were used in your code, that would help the judges review your submission.
+- [IBM Carbon Design Components](https://carbondesignsystem.com/) - The IBM Carbon Design Components have been used extensively for designing the User Interfaces which includes themes, forms, buttons etc.
 
 ### Solution architecture
 
 Diagram and step-by-step description of the flow of our solution:
 
-![Video transcription/translaftion app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
 
 1. The user navigates to the site and uploads a video file.
 2. Watson Speech to Text processes the audio and extracts the text.
@@ -75,7 +68,7 @@ Diagram and step-by-step description of the flow of our solution:
 
 ## Presentation materials
 
-_INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
+
 
 ### Solution demo video
 
@@ -85,11 +78,19 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 The project currently does the following things.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- User Registration & Authentication: This module allows users to register with the platform and provides authentication services.
+- Inventory Tracking: This module allows users to easily input and manage stock of food items through a user-friendly interface. Users can categorize items, input quantities and specify expiry dates.
+- Voice Recognition: This module powered by IBM Watson Speech to Text service provides voice understanding and allows users to input inventory details using voice.
+- Dashboard: Provides a detailed listing of invntory organized by category and  expiry dates. Additonally it also provides reports on amount of food consumed, saved and wasted on a monthly basis. This designed to track the reduction in waste achieved over time and prompte sustaiable and responsible living.
 
 In the future we plan to...
+
+- Expiry Notification: In addition to dashboards the system will generate automated notifications before expiry of food items at configured intervals as a proactive effort to reduce likelihood of wastage due to neglect.
+
+- Marketplace: Provide a dedicated platform to facilitate sharing of surplus food items within community.
+
+- Image recognition: Read product labels to extract item details like category, expiry dates and directly save to build up the inventory faster. Also support extraction of data from invoices wherever possible.
+ 
 
 See below for our proposed schedule on next steps after Call for Code 2023 submission.
 
@@ -102,6 +103,29 @@ _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Addit
 ### How to run the project
 
 INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
+docker  network create my-net
+
+docker run -d--name mysql-container --network my-net -e MYSQL_ROOT_PASSWORD=mysql12345 -e MYSQL_DATABASE=offshelf mysql:8.0.1
+
+ 
+
+---------------------------------------------------------------------------------------------------------
+
+Note: 
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql-container
+
+ 
+
+take the ip address and put it in /etc/hosts file
+
+<ip>  mysql-container
+
+--------------------------------------------------------------------------------------------------------
+
+docker run -it --name django-container --network my-net -p 8000:8000 rajdeep662/offshelf4.1
+
+Access the static website at <a href="https://son-ya123.github.io/offShelf/dashboard"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the frontend code locally
 
 ### Live demo
 
@@ -125,11 +149,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ### Authors
 
-<a href="https://github.com/Call-for-Code/Project-Sample/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Call-for-Code/Project-Sample" />
-</a>
-
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+[Soniya](https://github.com/son-ya123)
+[Siti](https://github.com/SitiNorhanisa)
+[Rajdeep](https://github.com/Rajdeep2000)
+[Jayatu](https://github.com/jayatuB)
+[Rahizal](https://github.com/reyzeck)
 
 ### License
 
