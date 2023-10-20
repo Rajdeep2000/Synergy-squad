@@ -103,6 +103,29 @@ _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Addit
 ### How to run the project
 
 INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
+docker  network create my-net
+
+docker run -d--name mysql-container --network my-net -e MYSQL_ROOT_PASSWORD=mysql12345 -e MYSQL_DATABASE=offshelf mysql:8.0.1
+
+ 
+
+---------------------------------------------------------------------------------------------------------
+
+Note: 
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mysql-container
+
+ 
+
+take the ip address and put it in /etc/hosts file
+
+<ip>  mysql-container
+
+--------------------------------------------------------------------------------------------------------
+
+docker run -it --name django-container --network my-net -p 8000:8000 rajdeep662/offshelf4.1
+
+Access the static website at <a href="https://son-ya123.github.io/offShelf/dashboard"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the code locally
 
 ### Live demo
 
