@@ -96,7 +96,7 @@ const VoiceInput = ({name, setName,type}) => {
       <div className='voice-button-container'>
         <Button disabled={!tempName} kind="tertiary" onClick={e=>{setMsg();setTempName()}}hasIconOnly renderIcon={Renew} iconDescription='Retry'></Button>
         <Button  disabled={!tempName} kind="tertiary" onClick={e=>{setName(tempName)}}hasIconOnly renderIcon={Checkmark} iconDescription='Accept'></Button>
-        <Button kind="tertiary" onClick={e=>{setName(' ')}}hasIconOnly renderIcon={ArrowRight} iconDescription='Skip'></Button>
+        <Button kind="tertiary" onClick={e=>{if(!name)setName(' ')}}hasIconOnly renderIcon={ArrowRight} iconDescription='Skip'></Button>
       </div>
       <div>{tempName}</div>
       {error && <ToastNotification onCloseButtonClick={() => setError()} role="status" title="Error" subtitle={error} kind="error" lowContrast={true} />}

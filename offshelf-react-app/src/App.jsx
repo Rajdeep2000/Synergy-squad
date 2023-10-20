@@ -54,11 +54,11 @@ function App() {
       element: <RequireAuth><PageHeader /><FormOutputPage image={image} setImage={setImage} /></RequireAuth>,
     },
     {
-      path: "form/output/:name/:type/:qty",
+      path: "form/output/:name/:type",
       element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
     },
     {
-      path: "form/output/:name/:type/:qty/:expiry",
+      path: "form/output/:name/:type/:qty",
       element: <RequireAuth><PageHeader /><FormOutputPage /></RequireAuth>,
     },
     {
@@ -106,9 +106,9 @@ function App() {
   )
 }
 function RequireAuth({ children }) {
-  if (!window.sessionStorage.getItem("token")) {
+  /* if (!window.sessionStorage.getItem("token")) {
     return <Navigate to="/login" replace={true} />;
-  }
+  } */
   return children;
 }
 
