@@ -95,12 +95,12 @@ const FormOuputPage = ({ image, setImage }) => {
     }
 
     return (
-        <div className='container'>
+        <div className='container form-output'>
             {/* <form onSubmit={handleSubmit}> */}
             {/* <CameraInput savedImage={savedImage} setSavedImage={setSavedImage}/> */}
             {/* <h4 className='form-title'>Add products</h4> */}
-            <div className={success || error ? 'form-container' : 'form-container sign-in-form'}>
-                <div className='img-container'>
+            <div style={{marginTop: '3rem'}} className={success || error ? 'form-container' : 'form-container sign-in-form'}>
+                <div className='img-container' style={{margin:'-1rem'}}>
                     <div className='product-img'>
                         <img src={image ? image : sampleImage} ></img>
                     </div>

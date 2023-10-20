@@ -125,6 +125,7 @@
 } */
                 
                 .btn-div .btn-cancel {
+                  z-index: 2;
                     // position: absolute;
                     position: fixed;
                     top: 4rem;
@@ -156,7 +157,30 @@
                     }
                     .btn-container .camera-save-btn {
                         // display: flex;
+                        position: fixed;
+                        bottom:0;
                         max-inline-size: calc(100vw - 2rem);
                         border-radius: 50px;
                     }
                 }
+
+                video {
+                  width: 100vw;
+                  height: calc(100vh - 4rem);
+                  object-fit: fill;
+                  display: flex;
+                  /* left: 50%; /* % of surrounding element 
+                  top: 50%;
+                  transform: translate(-50%, -50%); /* % of current element */ 
+              }
+              .camera-btn-container{
+               bottom: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    .cds--btn{
+      width: 100%;
+      max-inline-size:100vw;
+    }
+              }

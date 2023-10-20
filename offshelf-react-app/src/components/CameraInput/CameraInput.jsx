@@ -14,8 +14,7 @@ const CameraInput = ({ image, setImage }) => {
   const [productType, setProductType] = useState();
   const isMobile = window.matchMedia("(max-width: 767px)").matches ? true: false;
   const videoConstraints = {
-    width: 1280,
-    height: 720,
+
     // facingMode: { exact: "environment" }
     facingMode: isMobile ? "environment":"user"
   };
@@ -23,16 +22,15 @@ const CameraInput = ({ image, setImage }) => {
     <div className='form-container-camera'>
       <div className='btn-div'>
         <Button style={{ borderRadius: '50px' }} className='btn-cancel' kind='default' onClick={e => { navigate('/form/new') }} renderIcon={ArrowLeft} hasIconOnly ></Button> </div>
-      {(!savedImage ? <div className='img-container'><Webcam
+      {(!savedImage ? <div className='img-container' style={{backgroundColor: 'black'}}><Webcam
         audio={false}
-        height={720}
         screenshotFormat="image/jpeg"
-        width={1280}
         videoConstraints={videoConstraints}
       >
         {({ getScreenshot }) => (
-          <div className='btn-container'>
+          <div className='btn-container camera-btn-container' >
             <Button
+            style={{width:'100vw'}}
               className='camera-save-btn'
               onClick={() => {
                 const imageSrc = getScreenshot();

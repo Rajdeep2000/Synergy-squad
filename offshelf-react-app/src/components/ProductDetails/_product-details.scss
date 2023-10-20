@@ -75,4 +75,10 @@
   .expiry {
     color: gray;
   }
+  
+}
+.btn-saved{
+  @media (min-width:665px) {
+    left:80vw !important;
+  }
 }
