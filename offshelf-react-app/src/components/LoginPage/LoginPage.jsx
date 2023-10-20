@@ -21,7 +21,7 @@ const LoginPage = () => {
     const login = async () => {
         try {
             // const {data:result} = axios.post()
-            
+
             setLoading(true);
             setErrMsg();
             setSuccess(false);
@@ -48,7 +48,7 @@ const LoginPage = () => {
 
     return (
         <div className='container'>
-            {loading&&<Loading/>}
+            {loading && <Loading />}
             <div className={success || error ? 'form-container sign-in-form overlay' : 'form-container sign-in-form'}>
                 {/* <CameraInput image={image} saveImage={saveImage}/> */}
                 {/* <div className='tiles-container'> */}
