@@ -90,7 +90,39 @@ In the future we plan to...
 
 ### How to run the project
 
-Follow the steps in [Steps to run locally](./offshelf-django-app/README.md) to run the backend code locally
+## STEPS TO RUN THE BACKEND
+
+> Create a docker network
+
+```sh
+docker network create mynetwork
+```
+
+> Run the MySQL container
+
+```sh
+docker run -d --name mysql-container --network=mynetwork -e MYSQL_ROOT_PASSWORD=mysql12345 -e MYSQL_DATABASE=offshelf mysql:8.1.0
+```
+
+> Note down the container host
+
+```sh
+docker inspect -f '{{.HostConfig.NodeName}}' mysql-container
+```
+
+
+> take the ip address and put it in /etc/hosts file
+
+```
+<ip>  mysql-container
+```
+
+> Run the container
+
+```
+docker run -it --name django-container --network my-net -p 8000:8000 rajdeep662/offshelf4.3
+```
+
 
 Access the static website at <a href="https://son-ya123.github.io/offShelf/"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the frontend code locally
 
