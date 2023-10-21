@@ -126,7 +126,7 @@ docker run -it --name django-container --network my-net -p 8000:8000 rajdeep662/
 
 Access the static website at <a href="https://son-ya123.github.io/offShelf/"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the frontend code locally
 
-Note: This react web app is designed to be mobile first and it is recommended to be viewed on a mobile screen.
+Note: This react web app is designed to be mobile first and it is recommended to be viewed on a mobile screen. The IBM cloud account used for the above application is suspended. To run the code a new IBM cloud account has to be created.
 
 
 ### Authors
