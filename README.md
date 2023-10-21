@@ -92,7 +92,7 @@ In the future we plan to...
 
 Follow the steps in [Steps to run locally](./offshelf-django-app/README.md) to run the backend code locally
 
-Access the static website at <a href="https://son-ya123.github.io/offShelf/dashboard"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the frontend code locally
+Access the static website at <a href="https://son-ya123.github.io/offShelf/"> this </a> location  or follow the steps in [Steps to run locally](./offshelf-react-app/README.md) to run the frontend code locally
 
 
 
