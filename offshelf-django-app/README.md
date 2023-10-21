@@ -30,5 +30,5 @@ docker build -t offshelf:1.0 -f offshelf.dockerfile .
 > Run the container
 
 ```sh
-docker run -d --name django-container --network=mynetwork -e SQL_SERVER_HOST=<HOST IP FROM MYSQL CONTAINER> -p 8000:8000 offshelf:1.0
+docker run -d --name django-container --network=mynetwork -e SQL_SERVER_HOST=<HOST IP FROM MYSQL CONTAINER> -p 8000:8000 offshelf:4.3
 ```
