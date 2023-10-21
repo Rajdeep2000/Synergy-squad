@@ -58,7 +58,7 @@ Reducing food waste not only saves money but also plays a vital role in conservi
 
 ### Solution architecture
 
-[Offshelf architecture](./images/architecture.png)
+![Offshelf architecture](./images/architecture.png)
 
 ## Presentation materials
 
