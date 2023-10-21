@@ -16,8 +16,8 @@ const FormOuputPage = ({ image, setImage }) => {
     const [showModal, setShowModal] = useState(false)
     // const [selectedProductType, setSelectedProductType] = useState(''); // to store selected product type
     const [inputValue, setInputValue] = useState('')
-    const [productName, setProductName] = useState(name ? name: 0);
-    const [productType, setProductType] = useState(type?type:0);
+    const [productName, setProductName] = useState(name ? name: "");
+    const [productType, setProductType] = useState(type?type:"");
     const [quantity, setQuantity] = useState(qty? qty: 0);
     const [selectedDate, setSelectedDate] = useState(expiry ? expiry:0);
     const [days] = useState(7);
@@ -77,7 +77,7 @@ const FormOuputPage = ({ image, setImage }) => {
                     type: productType,
                     quantity: quantity,
                     expiry_date: dateToEpoch,
-                    image_file: image
+                    image_file: image? image.replace("data:image/jpeg;base64,",""):""
                 }], { headers: { 'Authorization': "Token " + window.sessionStorage.getItem("token") } });
             setSuccess(true)
             setLoading(false);

@@ -53,7 +53,7 @@ const ProductDetails = () => {
       </div>
       </div>
       <div className='product-image-container'>
-        <img src={details?.image_file ? details.image_file:pImg} />
+        <img src={details?.image_file ? `data:image/jpeg;base64,${details.image_file}`:pImg} />
       </div>
       <div className='buttons-container'>
         <Button hasIconOnly renderIcon={Checkmark} iconDescription='Consume' kind="tertiary"></Button>

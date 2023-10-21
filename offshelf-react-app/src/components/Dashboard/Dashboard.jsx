@@ -99,7 +99,8 @@ const Dashboard = () => {
           </div>}
         </div>
 
-        {loading ? <Loading/> : list?.length > 0 ? <div className='product-list'> {list.map(l => <Product details={l} />)}</div>
+        {loading ? <Loading/> : list?.length > 0 ?
+         <div className='product-list'> {list.map(l => <Product details={l} />)}</div>
           : <div className='empty-container'>
             <div className='empty-title'>No fresh items</div>
             <br></br>

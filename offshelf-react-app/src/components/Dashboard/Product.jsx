@@ -14,7 +14,7 @@ const Product = ({ details }) => {
       <ClickableTile id={`tile-${details.name}`} onClick={e => { navigate(`/product-details/${details.name}`) }}>
         <div className='products-details'>
           <div className='product-img-container'>
-            <img alt="no-image" src={details?.image_file ? `${details.image_file}` : pImg} width="100" height="60"></img>
+            <img alt="no-image" src={details?.image_file ? `data:image/jpeg;base64,${details.image_file}` : pImg} width="100" height="60"></img>
             </div>
           <div className='products-info'>
             <div className='products-name'>{details.name}</div>
