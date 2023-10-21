@@ -82,7 +82,8 @@ In the future we plan to...
 - Marketplace: Provide a dedicated platform to facilitate sharing of surplus food items within community.
 
 - Image recognition: Read product labels to extract item details like category, expiry dates and directly save to build up the inventory faster. Also support extraction of data from invoices wherever possible.
- 
+
+![Roadmap](./images/Timeline.png)
 
 ## Additional details
 
